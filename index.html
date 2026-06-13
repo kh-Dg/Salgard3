@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Love Story ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        
+        <!-- قلب متحرک -->
+        <div class="heart-icon">❤️</div>
+        <h1>Love Story</h1>
+        
+        <!-- تاریخ -->
+        <div class="date">۱۴۰۲/۰۲/۱۵</div>
+        <div class="forever">تا همیشه...</div>
+        
+        <!-- قاب عکس با صفحات کج زیر آن -->
+        <div class="photo-stack">
+            <div class="photo-layer layer-1"></div>
+            <div class="photo-layer layer-2"></div>
+            <div class="photo-layer layer-3"></div>
+            <div class="photo-frame square">
+                <img src="https://picsum.photos/id/20/300/300" alt="عکس" id="profilePhoto">
+                <div class="photo-glow"></div>
+                <div class="corner-decoration top-left">📸</div>
+                <div class="corner-decoration top-right">✨</div>
+                <div class="corner-decoration bottom-left">💕</div>
+                <div class="corner-decoration bottom-right">🎞️</div>
+            </div>
+        </div>
+        
+        <!-- پلیر موزیک (اصلاح شده) -->
+        <div class="music-player">
+            <div class="song-info">
+                <div class="song-title">All of Me</div>
+                <div class="artist">John Legend</div>
+            </div>
+            
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time">
+                    <span id="currentTime">00:00</span>
+                    <span id="duration">04:29</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="ctrl-btn" id="prevBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                <button class="ctrl-btn play-btn" id="playPauseBtn">
+                    <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22">
+                        <path fill="white" d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon" style="display:none" viewBox="0 0 24 24" width="22" height="22">
+                        <path fill="white" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <button class="ctrl-btn" id="nextBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- ویس تلگرامی -->
+        <div class="voice-message" id="voiceMessage">
+            <div class="voice-btn">
+                <span class="voice-icon">🎤</span>
+                <span class="voice-text">پیام صوتی</span>
+                <span class="voice-duration">۰:۲۴</span>
+            </div>
+            <div class="voice-wave" id="voiceWave">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        
+        <!-- نقل قول -->
+        <div class="quote">"تو بهترین اتفاق زندگی منی"</div>
+        
+    </div>
+</div>
+
+<!-- مودال ویس -->
+<div class="voice-modal" id="voiceModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-icon">🎤</div>
+        <h3>پیام صوتی</h3>
+        <div class="telegram-voice">
+            <div class="voice-player-telegram">
+                <button class="telegram-play" id="telegramPlayBtn">▶</button>
+                <div class="telegram-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="telegram-time" id="telegramTime">00:00 / 00:24</span>
+            </div>
+        </div>
+        <p id="voiceText">پیام عاشقانه برای تو...</p>
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="voiceAudio">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
